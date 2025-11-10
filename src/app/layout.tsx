@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
+import CookieBanner from "@/components/CookieBanner";
 
 export const metadata: Metadata = {
   title: "Sites vitrines Savoie | Brice",
@@ -24,6 +25,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         `}} /> */}
         <div className="mx-auto max-w-6xl px-4">
           {children}
+          <CookieBanner />
         </div>
         <Analytics />
       </body>
